@@ -1,0 +1,1 @@
+document.getElementById("menu").innerHTML = '<ul id="menubar"><li><a id="menuitems" href="index.html">About Me</a></li><li><a id="menuitems" href="https://docs.google.com/document/d/1snrYOvs6KnWdICX5wqxZ3KzU1jtyqvUSI6f0XmLoxXU/edit?usp=sharing">Resume</a></li><li><a id="menuitems" href="projects.html">Personal Projects</a></li></ul>';

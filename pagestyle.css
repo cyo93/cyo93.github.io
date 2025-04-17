@@ -1,0 +1,32 @@
+#menubar{
+	list-style-type: none;
+	display: block;
+	overflow: hidden;
+	background-color: #001A6F;
+}
+#menuitems{
+	float: left;
+	display: block;
+	padding: 10px;
+	font-family: "Michroma", arial;
+	font-size: 30px;
+	color: white;
+}
+h1{
+	font-family: "Michroma", arial;
+	font-size: 40px;
+	color: white;
+}
+h2 {
+	font-family: "Michroma", arial;
+	font-size: 30px;
+	color: white;
+}
+p {
+	font-family: "Michroma", arial;
+	color: white;
+	font-size: 20px;
+}
+body {
+	background-color: black;
+}
