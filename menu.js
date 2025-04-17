@@ -1,1 +1,1 @@
-document.getElementById("menu").innerHTML = '<ul id="menubar"><li><a id="menuitems" href="about.html">About Me</a></li><li><a id="menuitems" href="Resume.pdf">Resume</a></li><li><a id="menuitems" href="projects.html">Personal Projects</a></li></ul>';
+document.getElementById("menu").innerHTML = '<ul id="menubar"><li><a id="menuitems" href="index.html">About Me</a></li><li><a id="menuitems" href="Resume.pdf">Resume</a></li><li><a id="menuitems" href="projects.html">Personal Projects</a></li></ul>';
