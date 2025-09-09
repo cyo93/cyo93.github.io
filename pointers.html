@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="pagestyle.css">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+<script src="menu.js" defer></script>
+<div id="menu"></div>
+</head>
+
+<style>
+.article{
+	inline-size: 500px;
+}
+</style>
+
+<body>
+<div class="article">
+<h1>To Point or Not To Point; That is the Question</h1>
+<p>Performance is one of the most important aspects that can make or break a game; players often feel forced to stop playing games when there are hitches, stutters, 
+and low FPS in their favorite games. This can lead to lower review scores, as well as less player engagement. 
+One of the most important concepts in game engineering is to try to use the fastest available storage possible whenever it is practical and possible. 
+Typically you want to try and use the CPU cache as much as possible, avoid using RAM, and especially avoid using storage media. RAM and storage media are very slow compared to CPU cache, and can result in slower performance when used frequently. 
+A frequently asked question about C++ is whether to use pointers or not; I’ll be happy to explain the pros and cons of each approach.
+</p>
+<h2>
+Pointer Pros
+</h2>
+<p>Pointers allow you to allocate memory ahead of time, meaning that if you know how much memory you need to allocate an object, you can use the objects for as long as you like, as long as you keep the pointer in the stack. 
+The heap is also much larger than the stack, allowing for allocation and buffering of large data files used frequently in video games, such as models (rendering backends usually manage that memory), sound, and music. 
+Pointers are also great for infrequently used data, minimizing perceptible performance impact since such data is accessed infrequently.
+</p>
+<h2>
+Pointer Cons
+</h2>
+<p>The biggest drawback of using pointers is that they are slower than using stack memory; the computer has to access the data stored in memory that is being pointed at at the pointer. Since memory is far slower than CPU cache, 
+using too many pointers on frequently accessed data can result in a slower game overall. 
+In the book “Game Programming Patterns” by Robert Nystroom, this is known as “Pointer Chasing”, and goes against his concept of “Data Locality”. 
+In a nutshell, it generally takes more CPU cycles to access something in memory and even more to access in storage medium compared to accessing the same information in the cache. 
+Also, pointers need to be deallocated manually, or else “memory leaks” can occur; which can be very bad for a program’s reliability and cause crashing from too much memory usage. For this reason, people use something called “smart pointers” which help deallocate memory when it’s no longer needed.
+</p>
+<h2>
+Conclusion
+</h2>
+<p>Whether to use pointers or not depends on the situation, but it’s always best when engineering games to use the fastest storage available whenever it is possible. 
+The “Game Programming Patterns” book calls this “Data Locality”, and provides some real world analogies to help you understand the concept even better.
+</p>
+
+<h2>
+Further Reading
+</h2>
+<a href="https://gameprogrammingpatterns.com/contents.html"><p>https://gameprogrammingpatterns.com/contents.html</p></a>
+</div>
+</body>
