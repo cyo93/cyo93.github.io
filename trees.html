@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="pagestyle.css">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+<script src="menu.js" defer></script>
+<div id="menu"></div>
+</head>
+
+<style>
+body{
+	text-align: center;
+{
+img {
+	max-height: 25%; 
+	max-width: 25%;
+}
+</style>
+
+<body>
+<div class="article">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1>Trees for Speed</h1>
+<p>Since I was young, I found the concept of File Systems to be quite interesting, and have been digging through various file systems found on DVD’s. So far, I’ve looked at the ISO file system, as well as the file system found in the GameCube and Xbox systems.</p>
+<p>What intrigued me was that different DVDs can use different file systems that are suitable for different purposes. For instance, a game needs to be loaded quickly, so filesystems found in the Nintendo GameCube and 
+Microsoft Xbox are simpler than the more general-purpose file system used in typical DVDs. </p>
+<p>With my knowledge of data structures, I created a program meant to analyze various ISO formats, and plan to release it by (hopefully) the end of this year. 
+At first, I wondered why certain companies use formats other than the standard ISO format used in DVDs, before I realized how slow the running time was of the standard format. 
+Running times can have a huge impact for game developers who are constantly trying to read disc data, which can make the overall experience feel less seamless.</p>
+<p>Below, I visualize a tree of what a typical disc filesystem looks like: </p>
+<img src="ISOOverview.png"></img>
+<p>As you can see, it is basically a tree with pointers to files with sizes, as well as additional attributes that let the system know various important details, such as when the file was created/modified, whether the file should be shown in the file browser, 
+and additional add-on file systems that enhance the capabilities of the standard ISO file system. The GameCube file system uses the same concept, except that there are no extra attributes since these are useless for the software.</p>
+<p>What surprised me the most was that the Xbox filesystem was quite different compared to the filesystem found in standard DVDs and the GameCube; it uses AVL trees to store data, which allows for faster access to data through binary searching. 
+Based on what I know about searching, this would allow game developers to find files faster compared to doing a standard search, which requires going through the entire tree sequentially to try and find the right file requested. 
+You can see a visualization I created of the file system below: </p>
+<img src="XboxOverview.png"></img>
+<p>I often notice when putting a PlayStation 2 disc inside a PC that, compared to the PC versions of games, many developers use their own archive formats instead of keeping the files on the disc using the normal filesystem. 
+Based on the knowledge acquired from the project, I believe this is done to ensure quicker access to files, since games can contain so many files in a single build. 
+I’ve personally dealt with team projects with many files and had to search through using an engine search feature to find assets that are needed for my work. </p>
+<p>Working on this project was quite fun; I got to learn more about data structures, which is a very important skill for those in engineering fields. 
+My hope is that I will expand this project to studying other file systems like NTFS and FAT, which both use trees to efficiently access files. </p>
+</div>
+</body>
