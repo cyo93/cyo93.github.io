@@ -33,7 +33,7 @@ Running times can have a huge impact for game developers who are constantly tryi
 <img src="ISOoverview.png"></img>
 <p>As you can see, it is basically a tree with pointers to files with sizes, as well as additional attributes that let the system know various important details, such as when the file was created/modified, whether the file should be shown in the file browser, 
 and additional add-on file systems that enhance the capabilities of the standard ISO file system. The GameCube file system uses the same concept, except that there are no extra attributes since these are useless for the software. Also, directories on the disc don't
-require a new sector on the disc to be used, making the filesystem overall take less overhead than the standard DVD filesytem.</p>
+require a new sector on the disc to be used, making the filesystem overall take less overhead than the standard DVD filesytem. Since the GameCube basically uses the MiniDVD format, having less overhead for storing files is crucial.</p>
 <p>What surprised me the most was that the Xbox filesystem was quite different compared to the filesystem found in standard DVDs and the GameCube; it uses AVL trees to store data, which allows for faster access to data through binary searching. 
 Based on what I know about searching, this would allow game developers to find files faster compared to doing a standard search, which requires going through the entire tree sequentially to try and find the right file requested. 
 You can see a visualization I created of the file system below: </p>
