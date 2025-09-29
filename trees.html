@@ -34,7 +34,8 @@ a logical block address, meaning that the address is divided by the sector size 
 <p>The GameCube file system uses the same concept, except that there are no extra attributes since these are useless for the software. Each file is also stored using raw addresses as opposed to logical block addresses. This eliminates the
 requirement to use a new sector when a new file is used on a disc. Furthermore, directories on the disc don't require a new sector on the disc to be used, 
 making the filesystem overall take less overhead than the standard DVD filesytem. Since the GameCube basically uses the MiniDVD format, having less overhead for storing files is crucial.</p>
-<p>What surprised me the most was that the Xbox filesystem was quite different compared to the filesystem found in standard DVDs and the GameCube; it uses AVL trees to store data, which allows for faster access to data through binary searching. 
+<p>What surprised me the most was that the Xbox filesystem was quite different compared to the filesystem found in standard DVDs and the GameCube; it uses AVL trees to store data, which allows for faster access to data through binary searching.
+Even though the ISO File System provides for a path-table that provides easy and fast access to folders with alphabetical sorting, it does not require that files in the directory table be sorted by name, which makes binary searching the directory table impossible.
 This allows game developers to find files faster compared to doing a standard search, which requires going through the entire tree sequentially to try and find the right file requested. 
 You can see a visualization I created of the file system below: </p>
 <img src="Xboxoverview.png" height="50%" width="50%"></img>
