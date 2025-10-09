@@ -30,3 +30,44 @@ p {
 body {
 	background-color: black;
 }
+.topmenu {	
+	overflow: hidden;
+	background-color: #001A6F;
+	padding: 10px;
+	position: relative;
+}
+.topmenu a {
+	font-family: "Michroma", arial;
+	font-size: 30px;
+	color: white;
+}
+.topmenu #menusdesktop {
+	display: inline;
+	padding 1;
+}
+.topmenu #menudesktopitem {
+	display: inline;
+}
+.topmenu #menudesktopitem a{
+	padding: 10px;
+}
+
+.topmenu #menus {
+	display: none;
+}
+
+.mobilemenu {
+	display: none;
+}
+
+#mobilemenus {
+	display: inline;
+}
+
+@media screen and (max-width: 600px){
+	.topmenu #menusdesktop { display: none; }
+	.topmenu .mobilemenu { position: absolute;
+				  right: 0;
+				  top: 0; }
+	.mobilemenu { display: block; }
+}
