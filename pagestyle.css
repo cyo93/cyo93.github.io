@@ -43,13 +43,17 @@ body {
 }
 .topmenu #menusdesktop {
 	display: inline;
-	padding 1;
+	padding 0px;
 }
 .topmenu #menudesktopitem {
 	display: inline;
 }
 .topmenu #menudesktopitem a{
 	padding: 10px;
+}
+
+.mobilehome {
+	display: none;
 }
 
 .topmenu .menus {
@@ -70,4 +74,6 @@ body {
 				  right: 0;
 				  top: 0; }
 	.mobilemenu { display: block; }
+	.mobilehome { display: inline; overflow: hidden;
+	position: relative; }
 }
