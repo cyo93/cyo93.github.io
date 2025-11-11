@@ -1,0 +1,21 @@
+#floatmenu{
+	display: none;
+	float:right;
+	margin-top: 80px;
+	top: 0;
+	right: 0;
+	background-color: #001A6F;
+	position: fixed;
+	list-style-type: none;
+}
+#floatmenu a {
+	font-family: "Michroma", arial;
+	font-size: 30px;
+	color: white;
+}
+@media screen and (min-width: 600px) {
+#floatmenu{
+	display: block;
+}
+	
+}

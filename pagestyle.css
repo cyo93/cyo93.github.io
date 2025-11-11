@@ -64,6 +64,12 @@ body {
 	display: none;
 }
 
+#important {
+	font-family: "Michroma", arial;
+	font-weight: bold;
+	color: red;
+	font-size: 20px;
+}
 #mobilemenus {
 	display: inline;
 }
