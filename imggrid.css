@@ -9,12 +9,19 @@
 	border: 2vw solid black;
 	text-align: center;
 	padding: 30px;
-	
+	pointer-events: none;
+	transition: 0.3s;
 }
 #image {
 	max-height: 100%;
 	max-width: 100%;
+	pointer-events: auto;
 }
+
+.container > div:hover {
+	background-color: yellow;
+}
+
 .fill{
 	display: block;
 	height: auto;

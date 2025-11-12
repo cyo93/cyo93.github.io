@@ -4,24 +4,33 @@
 	overflow: hidden;
 	background-color: #001A6F;
 }
-#menuitems{
-	float: left;
-	display: block;
-	padding: 10px;
-	font-family: "Michroma", arial;
-	font-size: 30px;
-	color: white;
-}
+
 h1{
 	font-family: "Michroma", arial;
 	font-size: 40px;
 	color: white;
 }
+
 h2 {
 	font-family: "Michroma", arial;
 	font-size: 30px;
 	color: white;
 }
+a p {
+	transition: 0.3s;
+}
+
+a h2 {
+	transition: 0.3s;
+}
+a p:hover {
+	color: yellow;
+}
+
+a h2:hover {
+	color: yellow;
+}
+
 p {
 	font-family: "Michroma", arial;
 	color: white;
@@ -45,11 +54,16 @@ body {
 	display: inline;
 	padding 0px;
 }
+
 .topmenu #menudesktopitem {
 	display: inline;
 }
-.topmenu #menudesktopitem a{
+.topmenu #menudesktopitem a:hover{
+	color: yellow;
+}
+.topmenu #menudesktopitem a {
 	padding: 10px;
+	transition: 0.3s;
 }
 
 .mobilehome {
