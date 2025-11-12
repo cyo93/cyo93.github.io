@@ -6,6 +6,7 @@
 	right: 0;
 	background-color: #001A6F;
 	position: fixed;
+	z-index: 1;
 	list-style-type: none;
 }
 #floatmenu a {
