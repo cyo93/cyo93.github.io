@@ -6,7 +6,16 @@
 	right: 0;
 	background-color: #001A6F;
 	position: fixed;
+	opacity: 0.5;
+	transition: 0.2s;
 	z-index: 1;
+}
+
+#floatmenu:hover {
+	opacity: 1;
+}
+
+#floatmenu ul {
 	list-style-type: none;
 }
 #floatmenu a {
