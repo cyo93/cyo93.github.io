@@ -61,9 +61,6 @@ body {
 .topmenu #menudesktopitem a:hover{
 	color: yellow;
 }
-.topmenu #menudesktopitem a:active {
-	color: yellow;
-}
 .topmenu #menudesktopitem a {
 	padding: 10px;
 	transition: 0.3s;
