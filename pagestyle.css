@@ -55,13 +55,17 @@ body {
 	padding 0px;
 }
 
-.topmenu #menudesktopitem {
+.topmenu .menudesktopitem {
 	display: inline;
 }
-.topmenu #menudesktopitem a:hover{
+.topmenu .menudesktopitem a:hover{
 	color: yellow;
 }
-.topmenu #menudesktopitem a {
+
+.topmenu .menudesktopitem[highlighted="true"] > a{
+	color: yellow;
+}
+.topmenu .menudesktopitem a {
 	padding: 10px;
 	transition: 0.3s;
 }
@@ -78,12 +82,21 @@ body {
 	display: none;
 }
 
+#mobilemenus .mobilemenuitem[highlighted="true"] > a {
+	color: yellow;
+}
+
 #important {
 	font-family: "Michroma", arial;
 	font-weight: bold;
 	color: red;
 	font-size: 20px;
 }
+
+.mobilehome[highlighted="true"] > a{
+	color: yellow;
+}
+
 #mobilemenus {
 	display: inline;
 }
