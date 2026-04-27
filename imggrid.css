@@ -1,28 +1,41 @@
 .container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 750px));
-	background-color: black;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	background-color: #000;
+	gap: 2vw;
+	padding: 2vw 0;
 	justify-content: center;
 }
+
 .container > div {
 	background-color: #001A6F;
-	border: 2vw solid black;
+	border: 2px solid #001A6F;
+	border-radius: 6px;
 	text-align: center;
-	padding: 30px;
+	padding: 24px;
 	pointer-events: none;
-	transition: 0.3s;
+	transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
 }
+
 #image {
 	max-height: 100%;
 	max-width: 100%;
 	pointer-events: auto;
+	border-radius: 4px;
 }
 
 .container > div:hover {
-	background-color: yellow;
+	background-color: #ffe600;
+	border-color: #ffe600;
+	transform: translateY(-3px);
 }
 
-.fill{
+/* keep card text readable on the yellow hover */
+.container > div:hover .fill {
+	color: #000;
+}
+
+.fill {
 	display: block;
 	height: auto;
 	width: auto;
@@ -30,6 +43,8 @@
 	font-family: "Michroma", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 30px;
-	color: white;
+	font-size: clamp(16px, 2vw, 24px);
+	color: #fff;
+	transition: color 0.25s ease;
+	pointer-events: auto;
 }

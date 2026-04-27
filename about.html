@@ -1,40 +1,93 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="pagestyle.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<Title>About - Chad Young</Title>
+<html lang="en">
 <head>
-<style>
-img {
-	float: right;
-	padding: 10px;
-}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<Title>About - Chad Young</Title>
+<link rel="stylesheet" href="pagestyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="menu.js" defer></script>
-<div id="menu"></div>
-<h1>About Me</h1>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src="chad.jpg" id="chad" height="25%" width="25%"></img>
-<p>Hi, My name is Chad Young and I'm currently a Senior at the University of Silicon Valley (USV). I am majoring in Game Engineering and have always been fascinated with the logic that goes into video game design.</p>
-<p>During my childhood, I've been intrigued by all elements of computing and software engineering. I started game development using Game Maker 7.  I've reverse engineered games created using Game Maker, as well as experimented with the suite of tools
-used in the engine. As I got older, I've been studying numerous programming languages including C++, Java, Javascript, Lua, GDScript and C#, and also learned how to use Unreal Engine, Unity and Godot. Having knowledge of numerous programming languages is 
-such a valuable asset to bring to a video game development team, since many games use different languages.</p>
-<p>Later in high school, I made a Java based game inspired by pong, with various maps such as a "brick-breaker" level and a level where the goals constantly shrink and grow.</p>
-<p>I've worked with teams and have been proven to be a very reliable teammate. Through the course of several development projects, my fellow team members have noted my significant contributions. These projects include games such as Goober and Oublivious. During these projects,
-I rapidly learned and deployed new skills such as GDScript, Godot, and Unity.</p>
-<p>My demonstrated ability to quickly learn new skills is a critical foundational element to success in the games industry, since new technologies are being constantly released, and many new games frequently use them.</p>
-<p>I am the founder of CTY Technologies, an electronics repair startup. I plan for the company to be a future game studio, with an integrated team that operated highly effectively in game development. In addition, my role as Vice President of the USV Game Development club,
- provides me the opportunity to both lead and participate in team efforts to the development of games.</p>
-<h2>Main Skills</h2>
+<style>
+.about-grid {
+	display: flex;
+	gap: 32px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-top: 8px;
+}
+.about-photo {
+	flex-shrink: 0;
+	width: clamp(140px, 22%, 220px);
+	border-radius: 6px;
+	border: 2px solid #001A6F;
+}
+.about-text { flex: 1; min-width: 260px; }
 
-<p>C++</p>
-<p>C#</p>
-<p>GDScript</p>
-<p>Unreal Engine</p>
-<p>Unity</p>
-<p>Godot</p>
+.skills-section {
+	margin-top: 36px;
+}
+.skills-section h2 {
+	margin-bottom: 16px;
+	border-bottom: 1px solid #001A6F;
+	padding-bottom: 8px;
+}
+.skills-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.skills-grid li {
+	font-family: "Exo 2", arial;
+	font-size: 15px;
+	color: #fff;
+	background-color: #001A6F;
+	border: 1px solid #002aaf;
+	border-radius: 4px;
+	padding: 6px 14px;
+	transition: background-color 0.2s, color 0.2s;
+}
+.skills-grid li:hover {
+	background-color: #ffe600;
+	color: #000;
+	border-color: #ffe600;
+}
+</style>
 </head>
+<body>
+<div id="menu"></div>
+
+<h1>About Me</h1>
+
+<div class="about-grid">
+	<img src="chad.jpg" alt="Chad Young" class="about-photo">
+	<div class="about-text">
+		<p>Hi, My name is Chad Young and I'm currently a Senior at the University of Silicon Valley (USV). I am majoring in Game Engineering and have always been fascinated with the logic that goes into video game design.</p>
+		<p>During my childhood, I've been intrigued by all elements of computing and software engineering. I started game development using Game Maker 7. I've reverse engineered games created using Game Maker, as well as experimented with the suite of tools used in the engine. As I got older, I've been studying numerous programming languages including C++, Java, Javascript, Lua, GDScript and C#, and also learned how to use Unreal Engine, Unity and Godot. Having knowledge of numerous programming languages is such a valuable asset to bring to a video game development team, since many games use different languages.</p>
+		<p>Later in high school, I made a Java based game inspired by pong, with various maps such as a "brick-breaker" level and a level where the goals constantly shrink and grow.</p>
+		<p>I've worked with teams and have been proven to be a very reliable teammate. Through the course of several development projects, my fellow team members have noted my significant contributions. These projects include games such as Goober and Oublivious. During these projects, I rapidly learned and deployed new skills such as GDScript, Godot, and Unity.</p>
+		<p>My demonstrated ability to quickly learn new skills is a critical foundational element to success in the games industry, since new technologies are being constantly released, and many new games frequently use them.</p>
+		<p>I am the founder of CTY Technologies, an electronics repair startup. I plan for the company to be a future game studio, with an integrated team that operated highly effectively in game development. In addition, my role as Vice President of the USV Game Development club provides me the opportunity to both lead and participate in team efforts to the development of games.</p>
+	</div>
+</div>
+
+<div class="skills-section">
+	<h2>Main Skills</h2>
+	<ul class="skills-grid">
+		<li>C++</li>
+		<li>C#</li>
+		<li>GDScript</li>
+		<li>Unreal Engine</li>
+		<li>Unity</li>
+		<li>Godot</li>
+	</ul>
+</div>
+
+</body>
+</html>

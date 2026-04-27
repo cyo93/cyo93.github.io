@@ -1,84 +1,91 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="pagestyle.css">
-<Title>Projects - Chad Young</Title>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<Title>Projects - Chad Young</Title>
+<link rel="stylesheet" href="pagestyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-<script src="menu.js" defer></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div id="menu"></div>
-</head>
+<script src="menu.js" defer></script>
 <style>
-h2 {
-	text-align: center;
-}
-#projects{
-	font-family: "Michroma", arial;
-	text-align: center;
-	font-size: 30px;
-}
-#projects a {
-	color: white;
-}
-.container {
+h2 { text-align: center; }
+
+.project-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 750px));
-	background-color: black;
-	justify-content: center;
-	pointer-events: none;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-auto-rows: 1fr;
+	gap: 20px;
+	padding: 12px 0;
 }
-.container > div {
+.project-card {
 	background-color: #001A6F;
-	border: 2vw solid black;
+	border: 2px solid #001A6F;
+	border-radius: 6px;
 	text-align: center;
-	padding: 30px;
-	transition: 0.3s;
-	pointer-events: none;
+	transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
 }
-
-a {
-	pointer-events: auto;
+.project-card:hover {
+	background-color: #ffe600;
+	border-color: #ffe600;
+	transform: translateY(-3px);
 }
-
-.container > div:hover {
-	background-color: yellow;
+.project-card:hover .card-link {
+	color: #000;
 }
-
-.container > div:hover > a {
-	color: red;
-}
-
-img {
-	max-height: 100%;
-	max-width: 100%;
-}
-.fill{
-	display: block;
-	height: auto;
-	width: auto;
+/* card-link fills the entire card so every pixel is clickable */
+.card-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100%;
+	padding: 20px;
 	text-decoration: none;
 	font-family: "Michroma", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 30px;
-	color: white;
+	font-size: clamp(14px, 1.8vw, 20px);
+	color: #fff;
+	transition: color 0.25s ease;
+	letter-spacing: 1px;
+	box-sizing: border-box;
 }
-
+/* fixed-height image box keeps all cards the same proportion */
+.card-link .img-box {
+	width: 100%;
+	height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 14px;
+	overflow: hidden;
+	border-radius: 4px;
+}
+.card-link .img-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 4px;
+	display: block;
+}
 </style>
+</head>
 <body>
+<div id="menu"></div>
 <h2>Personal Projects</h2>
-<div class="container">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div><a href="gam231.html" class="fill"><img src="gam231project.png"></img>GAM231 Final Project</a></div>
-<div><a href="goober.html" class="fill"><img src="goober.png"></img>Goober</a></div>
-<div><a href="graybox.html" class="fill"><img src="graybox.png"></img>GrayBox</a></div>
-<div><a href="ninja.html" class="fill"><img src="ninja.png"></img>Fruit Ninja Remake</a></div>
-<div><a href="oublivious.html" class="fill"><img src="oubliviousmenu.png"></img><br>Oublivious</a></div>
-<div><a href="tr.html"class="fill"><img src="tr.png"></img>Return of the Tomb Raider</a></div>
-<div><a href="bookcraft.html" class="fill"><img src="bookcraft.png"></img>Project Bookcraft</a></div>
-<div><a href="isobreaker.html" class="fill"><img src="cd.png"></img><br>ISOBreaker (New!)</a></div>
+
+<div class="project-grid">
+	<div class="project-card"><a href="gam231.html" class="card-link"><div class="img-box"><img src="gam231project.png" alt="GAM231 Final Project"></div>GAM231 Final Project</a></div>
+	<div class="project-card"><a href="goober.html" class="card-link"><div class="img-box"><img src="goober.png" alt="Goober"></div>Goober</a></div>
+	<div class="project-card"><a href="graybox.html" class="card-link"><div class="img-box"><img src="graybox.png" alt="GrayBox"></div>GrayBox</a></div>
+	<div class="project-card"><a href="ninja.html" class="card-link"><div class="img-box"><img src="ninja.png" alt="Fruit Ninja Remake"></div>Fruit Ninja Remake</a></div>
+	<div class="project-card"><a href="oublivious.html" class="card-link"><div class="img-box"><img src="oubliviousmenu.png" alt="Oublivious"></div>Oublivious</a></div>
+	<div class="project-card"><a href="tr.html" class="card-link"><div class="img-box"><img src="tr.png" alt="Return of the Tomb Raider"></div>Return of the Tomb Raider</a></div>
+	<div class="project-card"><a href="bookcraft.html" class="card-link"><div class="img-box"><img src="bookcraft.png" alt="Project Bookcraft"></div>Literalchemy</a></div>
+	<div class="project-card"><a href="isobreaker.html" class="card-link"><div class="img-box"><img src="cd.png" alt="ISOBreaker"></div>ISOBreaker</div>
 </div>
 </body>
 </html>
