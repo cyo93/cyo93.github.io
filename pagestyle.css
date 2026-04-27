@@ -142,7 +142,10 @@ a h2:hover {
 }
 
 #mobilemenus {
-	display: inline;
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 #menubar {
@@ -153,8 +156,67 @@ a h2:hover {
 }
 
 @media screen and (max-width: 600px) {
-	.topmenu #menusdesktop  { display: none; }
-	.topmenu .mobilemenu    { position: absolute; right: 0; top: 0; }
-	.mobilemenu             { display: block; }
-	.mobilehome             { display: inline; overflow: hidden; position: relative; }
+	/* Switch bar to wrap so the dropdown can sit on its own row */
+	.topmenu {
+		flex-wrap: wrap;
+		overflow: visible;
+		padding: 0;
+		/* Replace the bleed calc with a clean 100vw so no scrollbar appears */
+		width: 100vw;
+		margin-left: calc(-1 * clamp(16px, 5vw, 60px));
+	}
+
+	/* Hide desktop nav */
+	.topmenu #menusdesktop { display: none; }
+
+	/* Home link — left side of bar */
+	.mobilehome {
+		display: flex;
+		align-items: center;
+		padding: 0 16px;
+		flex: 1;
+	}
+	.mobilehome a {
+		font-size: 18px;
+		padding: 14px 0;
+	}
+
+	/* Hamburger — right side of bar */
+	.mobilemenu {
+		display: flex;
+		align-items: center;
+		position: static;
+		padding: 14px 18px;
+		font-size: 24px;
+		cursor: pointer;
+		color: #fff;
+		margin-left: auto;
+	}
+
+	/* Dropdown — full-width second row */
+	.topmenu .menus {
+		flex-basis: 100%;
+		width: 100%;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		background-color: #001A6F;
+	}
+
+	.mobilemenuitem {
+		display: block;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.mobilemenuitem a {
+		display: block;
+		padding: 14px 20px;
+		font-family: "Michroma", arial;
+		font-size: 16px;
+		color: #fff;
+		transition: color 0.2s ease, background-color 0.2s ease;
+	}
+
+	.mobilemenuitem a:hover {
+		color: #ffe600;
+		background-color: rgba(255, 255, 255, 0.05);
+	}
 }

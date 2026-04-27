@@ -5,7 +5,7 @@ getcurrentmenu();
 function showMobileMenu(){
 	menus = document.getElementById("menus");
 	if(menus.style.display == "none"){
-		menus.style.display = "inline";
+		menus.style.display = "block";
 	}
 	else {
 		menus.style.display = "none";
